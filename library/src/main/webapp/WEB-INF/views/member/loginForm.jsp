@@ -77,8 +77,10 @@
                                             Login
                                         </a> -->
 										<hr>
+										<div style="text-align: center">
 										<a href="#" onclick="kakaoLogin();"> <img src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
 											width="222" alt="카카오 로그인 버튼" /></a>
+										</div>
 									</form>
 									<hr>
 									<div class="text-center">

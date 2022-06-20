@@ -99,7 +99,7 @@
 						<a href="/library"><img src="img/yedam.png" alt=""></a>
 					</div>
 				</div>
-				<div class="col-lg-9">
+				<div class="col-lg-6" style="text-align: center;">
 					<nav class="header__menu">
 						<ul>
 							<li class="active">

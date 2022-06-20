@@ -15,4 +15,5 @@ public class BookVO {
 	private String category;
 	private int rentalCount;
 	private String image;
+	private String story;
 }
