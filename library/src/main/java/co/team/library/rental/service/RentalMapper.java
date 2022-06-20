@@ -12,5 +12,5 @@ public interface RentalMapper {
 	List<RentalVO>  nowRentalList(String id); //현재회원이 지금 대출중인 책만 조회
 	int boardListCount3();
 	int rentalBook(RentalVO vo);
-	List<RentalVO> bestseller();
+
 }

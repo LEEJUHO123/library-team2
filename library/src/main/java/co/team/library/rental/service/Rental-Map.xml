@@ -49,18 +49,4 @@
 		
 	</insert>
 	
-	<select id="bestseller" resultType="co.team.library.book.vo.BookVO">
-	    <![CDATA[
-        select t.bookcode, t.booktitle
-        from (select A.BOOKCODE AS BOOKCODE, A.BOOKTITLE AS BOOKTITLE,
-		A.PUBLISHER AS PUBLISHER, A.WRITER AS WRITER,A.IMAGE AS IMAGE, NVL(COUNT, 0) AS RENTALCOUNT
-        FROM BOOKLIST A LEFT OUTER JOIN  (SELECT BOOKCODE, COUNT(bookcode) AS COUNT FROM RENTAL
-        GROUP BY BOOKCODE) B
-        ON A.BOOKCODE = B.BOOKCODE
-        ORDER BY RENTALCOUNT DESC) t
-        where rownum <=5;
-        ]]>
-	</select>
-	
-	
 </mapper>

@@ -45,10 +45,5 @@ public class RentalServiceImpl implements RentalService{
 		return map.rentalBook(vo);
 	}
 
-	@Override
-	public List<RentalVO> bestseller() {
-		return map.bestseller();
-	}
-
 
 }

@@ -8,6 +8,7 @@ import co.team.library.book.service.BookMapper;
 import co.team.library.book.service.BookService;
 import co.team.library.book.vo.BookVO;
 import co.team.library.comm.DataSource;
+import co.team.library.rental.vo.RentalVO;
 
 public class BookServiceImpl implements BookService {
 	
@@ -62,6 +63,16 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public List<BookVO> searchKeyword(BookVO vo) {
 		return map.searchKeyword(vo);
+	}
+
+	@Override
+	public List<RentalVO> bestseller() {
+		return map.bestseller();
+	}
+
+	@Override
+	public List<RentalVO> categoryBest() {
+		return map.categoryBest();
 	}
 
 }
