@@ -7,11 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-
-
 </head>
 <body>
-	<!-- Humberger Begin -->
 	<div class="humberger__menu__overlay"></div>
 	<div class="humberger__menu__wrapper">
 		<div class="humberger__menu__logo">
@@ -22,7 +19,6 @@
 				<c:if test="${not empty id }">
 					<ul>
 						<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
-						<li><a href="mypageHome.do">마이페이지</a>
 						<li><a href="logout.do">Logout</a></li>
 					</ul>
 				</c:if>
@@ -45,7 +41,10 @@
 					</ul></li>
 				<li><a href="contact.do">찾아오는길</a></li>
 				<c:if test="${id eq 'abc@abc.com' }">
-					<li><a href="#">관리자페이지</a></li>
+					<li><a href="admin.do">관리자페이지</a></li>
+				</c:if>
+				<c:if test="${not empty id }">
+					<li><a href="mypageHome.do">마이페이지</a></li>
 				</c:if>
 			</ul>
 		</nav>
@@ -56,7 +55,6 @@
 			</ul>
 		</div>
 	</div>
-	<!-- Humberger End -->
 
 	<header class="header">
 		<div class="header__top">
@@ -75,7 +73,6 @@
 								<ul>
 									<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
 									<li>${name }님
-									<li><a href="mypageHome.do">마이페이지</a>
 									<li><a href="logout.do">Logout</a></li>
 								</ul>
 							</c:if>
@@ -115,6 +112,9 @@
 							<c:if test="${id eq 'abc@abc.com' }">
 								<li><a href="admin.do">관리자페이지</a></li>
 							</c:if>
+							<c:if test="${not empty id }">
+								<li><a href="mypageHome.do">마이페이지</a></li>
+							</c:if>
 						</ul>
 					</nav>
 				</div>
@@ -125,7 +125,6 @@
 		</div>
 	</header>
 
-	<!-- Hero Section Begin -->
 	<section class="hero hero-normal">
 		<div class="container">
 			<div class="row">
@@ -186,7 +185,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- Hero Section End -->
 
 
 </body>

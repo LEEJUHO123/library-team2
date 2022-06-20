@@ -67,4 +67,5 @@
 		parameterType="co.team.library.qna.vo.QnaVO">
 		DELETE FROM QNA WHERE BOARDNUMBER = #{boardNumber}
 	</delete>
+	
 </mapper>

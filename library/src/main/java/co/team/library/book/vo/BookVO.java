@@ -14,5 +14,6 @@ public class BookVO {
 	private int volume;
 	private String category;
 	private int rentalCount;
+	private int returnOrNot;
 	private String image;
 }

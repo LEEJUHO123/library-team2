@@ -184,7 +184,8 @@ img {
 									<td>
 										<c:choose>
 											<c:when test="${rental.returnOrNot == 0}">대출중</c:when>
-											<c:otherwise>반납완료</c:otherwise>
+											<c:when test="${rental.returnOrNot == 1}">반납완료</c:when>
+											<c:when test="${rental.returnOrNot == 2}">연체중</c:when>
 										</c:choose>
 									</td>
 								</tr>

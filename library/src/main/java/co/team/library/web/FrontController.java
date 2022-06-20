@@ -102,12 +102,6 @@ public class FrontController extends HttpServlet {
 		map.put("/replyInput.do", new ReplyInput());
 		map.put("/replyList.do", new ReplyList());
 		
-		/*
-		 * map.put("/mypageHome.do", new MypageHomeCommand()); map.put("/myInfo.do", new
-		 * MyInfoCommand()); map.put("/nowRentalList.do", new NowRentalListCommand());
-		 * map.put("/myRentalList.do", new MyRentalListCommand());
-		 */
-		
 		//로그인
 		map.put("/login.do", new Login());
 		map.put("/loginForm.do", new LoginForm());

@@ -182,8 +182,9 @@ img {
 									<td>${rentalNow.returnDate }</td>
 									<td>
 										<c:choose>
-											<c:when test="${rental.returnOrNot == 0}">대출중</c:when>
-											<c:otherwise>반납완료</c:otherwise>
+											<c:when test="${rentalNow.returnOrNot == 0}">대출중</c:when>
+											<c:when test="${rentalNow.returnOrNot == 1}">반납완료</c:when>
+											<c:when test="${rentalNow.returnOrNot == 2}">연체중</c:when>
 										</c:choose>
 									</td>
 								</tr>
