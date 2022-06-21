@@ -66,13 +66,13 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<RentalVO> bestseller() {
+	public List<BookVO> bestseller() {
 		return map.bestseller();
 	}
 
 	@Override
-	public List<RentalVO> categoryBest() {
-		return map.categoryBest();
+	public List<BookVO> categoryBest(BookVO vo) {
+		return map.categoryBest(vo);
 	}
 
 }

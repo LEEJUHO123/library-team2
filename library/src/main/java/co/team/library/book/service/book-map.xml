@@ -82,7 +82,7 @@
         ]]>
 	</select>
 	
-	<select id="categoryBest" resultType="co.team.library.book.vo.BookVO">
+	<select id="categoryBest" parameterType="co.team.library.book.vo.BookVO" resultType="co.team.library.book.vo.BookVO">
 		<![CDATA[
 	    SELECT T.BOOKCODE AS BOOKCODE, T.BOOKTITLE AS BOOKTITLE, 
 	    T.PUBLISHER AS PUBLISHER, T.WRITER AS WRITER, T.IMAGE AS IMAGE, T.RENTALCOUNT AS RENTALCOUNT
@@ -91,9 +91,9 @@
         FROM BOOKLIST A LEFT OUTER JOIN  (SELECT BOOKCODE, COUNT(BOOKCODE) AS COUNT FROM RENTAL
         GROUP BY BOOKCODE) B
         ON A.BOOKCODE = B.BOOKCODE
-         WHERE CATEGORY LIKE '%'||{category}||'%'
+         WHERE CATEGORY LIKE '%'||#{category}||'%'
         ORDER BY RENTALCOUNT DESC) T
-        WHERE ROWNUM <=5
+        WHERE ROWNUM <=8
 		]]>
 	</select>
 	

@@ -38,21 +38,17 @@ public class MyRentalListCommand implements Command {
 			int returnBook = rentalList.get(i).getReturnOrNot();
 			if (returnBook == 0) {
 				if(sqlMonth > sysMonth) {
-					break;
 				}else if(sqlMonth == sysMonth) {
 					if(sqlDate < sysDate) {
 						rentalList.get(i).setReturnOrNot(2);
 					}else {
-						break;
 					}
 				}else if(sqlMonth < sysMonth) {
 					rentalList.get(i).setReturnOrNot(2);
 				}
 			}
 		}
-		
-		
-		
+
 		request.setAttribute("rentalList", rentalList);
 		return "mypage/myRentalList";
 	}

@@ -228,19 +228,19 @@ ul, ol {
   Header
 -----------------------*/
 
-.qna__top {	
- 	text-align:center;
- 	margin:0 auto; 	
+.qna__top {
+ 	float: left;
 }
 
 .qna__sel {
-	display: inline-block;
+	 display: inline-block;
 }
 
-.qna__type {	 	 
-	display: inline-block;
+.qna__type {	 
+	 display: block !important;
+	 display: inline-block; 
+	 
 }
-
 .admin_list {
 	text-align: center;
 	margin-bottom: 50px;
@@ -523,19 +523,18 @@ ul, ol {
 }
 
 .header__menu ul li a {
-	 font-size: 20px;
-    color: #252525;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 2px;
-    -webkit-transition: all, 0.3s;
-    -moz-transition: all, 0.3s;
-    -ms-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    transition: all, 0.3s;
-    padding: 5px 0;
-    display: block;
-    font-family: 'Jua', sans-serif;
+	font-size: 14px;
+	color: #252525;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	-webkit-transition: all, 0.3s;
+	-moz-transition: all, 0.3s;
+	-ms-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	padding: 5px 0;
+	display: block;
 }
 
 .header__cart {
@@ -1165,10 +1164,8 @@ ul, ol {
 
 .sidebar__item h4 {
 	color: #1c1c1c;
-	font-weight: 600;
-	margin-bottom: 60px;
-	font-size: 45px;
-	font-family: 'Jua', sans-serif;	
+	font-weight: 700;
+	margin-bottom: 25px;
 }
 
 .sidebar__item ul li {
@@ -1176,12 +1173,10 @@ ul, ol {
 }
 
 .sidebar__item ul li a {
-font-size: 40px;
+	font-size: 16px;
 	color: #1c1c1c;
 	line-height: 39px;
-	margin-bottom: 30px;
 	display: block;
-	font-family: 'Jua', sans-serif;	
 }
 
 .sidebar__item .latest-product__text {

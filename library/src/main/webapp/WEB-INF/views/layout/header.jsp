@@ -18,7 +18,7 @@
 			<ul>
 				<c:if test="${not empty id }">
 					<ul>
-						<!-- <li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li> -->
+						<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
 						<li><a href="logout.do">Logout</a></li>
 					</ul>
 				</c:if>
@@ -51,7 +51,7 @@
 		<div id="mobile-menu-wrap"></div>
 		<div class="humberger__menu__contact">
 			<ul>
-				<li><i class="fa fa-envelope"></i> ${id }</li>
+				<li><i class="fa fa-envelope"></i> abc@abc.com</li>
 			</ul>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 					<div class="col-lg-6 col-md-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> ${id }</li>
+								<li><i class="fa fa-envelope"></i> abc@abc.com</li>
 							</ul>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 						<div class="header__cart">
 							<c:if test="${not empty id }">
 								<ul>
-									<!-- <li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li> -->
+									<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
 									<li>${name }님
 									<li><a href="logout.do">Logout</a></li>
 								</ul>

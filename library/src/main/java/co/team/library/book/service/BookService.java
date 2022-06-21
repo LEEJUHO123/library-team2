@@ -16,8 +16,8 @@ public interface BookService {
 	BookVO bookDetail(String title);
 	
 	//메인화면에 노출
-	List<RentalVO> bestseller();
-	List<RentalVO> categoryBest();
+	List<BookVO> bestseller();
+	List<BookVO> categoryBest(BookVO vo);
 	
 	
 	// 관리자만 가능한 영역

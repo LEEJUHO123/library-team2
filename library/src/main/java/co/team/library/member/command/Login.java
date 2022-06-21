@@ -25,6 +25,7 @@ public class Login implements Command{
 		vo = dao.MemberSelect(vo);
 		
 		if(vo != null) {
+
 			if(vo.getBlack() == 1) {
 				request.setAttribute("message", "블랙리스트 대상자입니다. 관리자에게 문의바랍니다.                        📞Phone :(053)421-2460  /  ✉email : abc@abc.com");
 				return "member/loginForm";
