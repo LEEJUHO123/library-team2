@@ -33,7 +33,7 @@ public class SnsLogin implements Command {
 			session.setAttribute("name", vo.getName());
 			return "ajax:" + 1 ;
 		} else if(vo ==null){
-			
+			session.setAttribute("kakaoId", kakao);
 		}				
 		return "ajax:" + 2;	
 		

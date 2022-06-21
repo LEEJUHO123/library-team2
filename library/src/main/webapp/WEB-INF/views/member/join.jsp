@@ -3,6 +3,7 @@
 <%@page import="co.team.library.member.vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,10 +53,16 @@ MemberService dao = new MemberServiceImpl();
 					<div class="form-group">
 
 						<div class="form-group">
-
-							<input type="email" class="form-control" id="id" name="id"
+							<c:choose>
+								<c:when test="${not empty kakaoId }">
+								<input type="email" class="form-control" id="id" name="id" value="${kakaoId}"
 								placeholder="아이디(이메일 형식)" required onkeydown="inputIdChk()">
-
+								</c:when>
+								<c:otherwise>
+								<input type="email" class="form-control" id="id" name="id"
+								placeholder="아이디(이메일 형식)" required onkeydown="inputIdChk()">
+								</c:otherwise>
+							</c:choose>
 							<button type="button" class="idChk" id="idChk"
 								value="N" onclick="fn_idChk();">중복확인</button>
 <!-- 							<img id="id_check_sucess" style="display: none;"> -->

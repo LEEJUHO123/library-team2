@@ -4,7 +4,7 @@
 
 	<select id="bookList"
 		resultType="co.team.library.book.vo.BookVO">
-		SELECT * FROM BOOKLIST ORDER BY RENTAL,BOOKTITLE
+		SELECT * FROM BOOKLIST ORDER BY BOOKTITLE
 	</select>
 
 	<select id="searchBookCategory" resultType="co.team.library.book.vo.BookVO">
