@@ -29,7 +29,7 @@
 	<select id="memberRentalList"
 		resultType="co.team.library.rental.vo.RentalVO">
 
-	      SELECT *
+      SELECT *
       FROM (
       SELECT ROWNUM RN, A.*
       FROM (

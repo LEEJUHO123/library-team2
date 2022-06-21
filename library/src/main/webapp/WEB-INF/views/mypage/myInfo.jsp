@@ -49,7 +49,7 @@ fieldset {
 	<div class="container">
 		<div class="col-lg-12">
 			<div class="section-title from-blog__title">
-				<h2>회원 정보 확인</h2>
+				<h2>회원정보 확인</h2>
 			</div>
 		</div>
 		<div>

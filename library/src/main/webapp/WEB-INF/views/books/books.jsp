@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,13 @@
 <title>Insert title here</title>
 
 <script src="js/jquery-3.3.1.min.js"></script>
-
+<style>
+ul.cates li.current {
+	background: #ededed;
+	color: #222;
+	font-weight: 600;
+}
+</style>
 </head>
 <body>
 	<!-- Breadcrumb Section Begin -->
@@ -37,16 +44,16 @@
 					<div class="sidebar">
 						<div class="sidebar__item">
 							<h4>카테고리</h4>
-							<ul>
-								<li><a href="bookCategoryList.do?category=000" id="category" name="category" val="000">총류</a></li>
-								<li><a href="bookCategoryList.do?category=100" id="category" name="category" val="100">철학서적</a></li>
-								<li><a href="bookCategoryList.do?category=200" id="category" name="category" val="200">종교서적</a></li>
-								<li><a href="bookCategoryList.do?category=300" id="category" name="category" val="300">인문사회</a></li>
-								<li><a href="bookCategoryList.do?category=400" id="category" name="category" val="400">순수문학</a></li>
-								<li><a href="bookCategoryList.do?category=600" id="category" name="category" val="600">예술서적</a></li>
-								<li><a href="bookCategoryList.do?category=700" id="category" name="category" val="700">언어관련</a></li>
-								<li><a href="bookCategoryList.do?category=800" id="category" name="category" val="800">일반문학</a></li>
-								<li><a href="bookCategoryList.do?category=900" id="category" name="category" val="900">역사서적</a></li>
+							<ul class="cates">
+								<li class="cate_controls"><a href="bookCategoryList.do?category=000" id="category" name="category" val="000">총류</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=100" id="category" name="category" val="100">철학서적</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=200" id="category" name="category" val="200">종교서적</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=300" id="category" name="category" val="300">인문사회</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=400" id="category" name="category" val="400">순수문학</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=600" id="category" name="category" val="600">예술서적</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=700" id="category" name="category" val="700">언어관련</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=800" id="category" name="category" val="800">일반문학</a></li>
+								<li class="cate_controls"><a href="bookCategoryList.do?category=900" id="category" name="category" val="900">역사서적</a></li>
 							</ul>
 						</div>
 					</div>

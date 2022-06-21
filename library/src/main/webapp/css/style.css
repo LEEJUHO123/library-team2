@@ -228,18 +228,22 @@ ul, ol {
   Header
 -----------------------*/
 
-.qna__top {
- 	float: left;
+.qna__top {	
+ 	text-align:center;
+ 	margin:0 auto; 	
 }
 
 .qna__sel {
-	 display: inline-block;
+	display: inline-block;
 }
 
-.qna__type {	 
-	 display: block !important;
-	 display: inline-block; 
-	 
+.qna__type {	 	 
+	display: inline-block;
+}
+
+.admin_list {
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .admin_list ul {
@@ -248,9 +252,10 @@ ul, ol {
 }
 
 .admin_list ul li {
-	font-size : 40px;
+	font-size : 25px;
 	margin: 10px;
 	display : inline-block;
+	font-color:#58ACFA;
 }
 
 .admin_list li a {
@@ -258,7 +263,7 @@ ul, ol {
 }
 
 .admin_list li a:hover {
-	color: red;			
+	color: #7fad39;			
 }
 
 
@@ -518,18 +523,19 @@ ul, ol {
 }
 
 .header__menu ul li a {
-	font-size: 14px;
-	color: #252525;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 2px;
-	-webkit-transition: all, 0.3s;
-	-moz-transition: all, 0.3s;
-	-ms-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
-	padding: 5px 0;
-	display: block;
+	 font-size: 20px;
+    color: #252525;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+    padding: 5px 0;
+    display: block;
+    font-family: 'Jua', sans-serif;
 }
 
 .header__cart {
@@ -863,9 +869,9 @@ ul, ol {
 .categories__slider.owl-carousel .owl-nav button {
 	font-size: 18px;
 	color: #1c1c1c;
-	height: 70px;
+	height: 100px;
 	width: 30px;
-	line-height: 70px;
+	line-height: 100px;
 	text-align: center;
 	border: 1px solid #ebebeb;
 	position: absolute;
@@ -1159,8 +1165,10 @@ ul, ol {
 
 .sidebar__item h4 {
 	color: #1c1c1c;
-	font-weight: 700;
-	margin-bottom: 25px;
+	font-weight: 600;
+	margin-bottom: 60px;
+	font-size: 45px;
+	font-family: 'Jua', sans-serif;	
 }
 
 .sidebar__item ul li {
@@ -1168,10 +1176,12 @@ ul, ol {
 }
 
 .sidebar__item ul li a {
-	font-size: 16px;
+font-size: 40px;
 	color: #1c1c1c;
 	line-height: 39px;
+	margin-bottom: 30px;
 	display: block;
+	font-family: 'Jua', sans-serif;	
 }
 
 .sidebar__item .latest-product__text {

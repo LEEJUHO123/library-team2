@@ -159,7 +159,7 @@ img {
 	<div class="container">
 		<div class="col-lg-12">
 			<div class="section-title from-blog__title">
-				<h2>나의 대출 이력</h2>
+				<h2>나의 대출목록</h2>
 			</div>
 			<body>
 				<div id="wrapper">

@@ -30,18 +30,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${members }" var="m">
+						<c:forEach items="${rentalMemberList }" var="l">
 							<tr align="center">
-								<td>${m.id }</td>
-								<td>${m.bookCode }</td>
-								<td>${m.bookTitle }</td>
-								<td>${m.rentalDate }</td>
-								<td>${m.returnDate }</td>
+								<td>${l.id }</td>
+								<td>${l.bookCode }</td>
+								<td>${l.bookTitle }</td>
+								<td>${l.rentalDate }</td>
+								<td>${l.returnDate }</td>
 								<td>
 								<c:choose>
-									<c:when test="${m.returnOrNot == 0}">대여중</c:when>
-									<c:when test="${m.returnOrNot == 1}">반납완료</c:when>
-									<c:when test="${m.returnOrNot == 2}">연체중</c:when>
+									<c:when test="${l.returnOrNot == 0}">대여중</c:when>
+									<c:when test="${l.returnOrNot == 1}">반납완료</c:when>
+									<c:when test="${l.returnOrNot == 2}">연체중</c:when>
 								</c:choose>
 								</td>
 							</tr>

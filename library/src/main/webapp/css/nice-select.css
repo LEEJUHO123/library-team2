@@ -1,13 +1,12 @@
 .nice-select {
-	visibility: hidden;
 	-webkit-tap-highlight-color: transparent;
 	border-radius: 5px;
-	border: solid 1px #e8e8e8;
+	border: solid 1px black;
 	box-sizing: border-box;
 	clear: both;
 	cursor: pointer;
 	display: block;
- 	float: right; 
+ 	float: left; 
 	font-family: inherit;
 	font-size: 14px;
 	font-weight: normal;
@@ -25,12 +24,11 @@
 	-ms-user-select: none;
 	user-select: none;
 	white-space: nowrap;
-	width: auto;
-	-webkit-tap-highlight-color: transparent;
-	border-radius: 0; /* 아이폰 사파리 보더 없애기 */
-	-webkit-appearance: none; /* 화살표 없애기 for chrome*/
-	-moz-appearance: none; /* 화살표 없애기 for firefox*/
-	appearance: none /* 화살표 없애기 공통*/
+	width: 70px;
+	height: 30px;
+	margin-bottom: 15px;
+	-webkit-tap-highlight-color: transparent;	
+	border-radius: 3px;
 }
 
 .nice-select:hover {
@@ -102,7 +100,7 @@
 
 .nice-select.right .list {
 	left: auto;
-	right: 0;
+	right: 0;	
 }
 
 .nice-select.small {
