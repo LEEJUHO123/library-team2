@@ -21,21 +21,22 @@ public class Login implements Command{
 		vo.setName(request.getParameter("name"));
 		vo.setTel(request.getParameter("tel"));
 		vo.setAddress(request.getParameter("address"));
+		
 		vo = dao.MemberSelect(vo);
 		
-		
 		if(vo != null) {
-			session.setAttribute("id", vo.getId());
-			session.setAttribute("password", vo.getPassword());
-			session.setAttribute("name", vo.getName());
-			session.setAttribute("tel", vo.getTel());
-			session.setAttribute("address", vo.getAddress());
-			return "home/home";
-		}else {
-			
+			if(vo.getBlack() == 1) {
+				request.setAttribute("message", "블랙리스트 대상자입니다. 관리자에게 문의바랍니다.                        📞Phone :(053)421-2460  /  ✉email : abc@abc.com");
+				return "member/loginForm";
+			}else {
+				session.setAttribute("id", vo.getId());
+				session.setAttribute("password", vo.getPassword());
+				session.setAttribute("name", vo.getName());
+				session.setAttribute("tel", vo.getTel());
+				session.setAttribute("address", vo.getAddress());
+			}
+			return "home.do";
 		}
-		
-		
 		
 		return "member/login";
 	}

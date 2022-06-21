@@ -64,8 +64,7 @@
 
 	<!-- Map Begin -->
 	<div id="map" style="width: 100%; height: 500px;"></div>
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b1a393f68f542d6b63c566ec34b1beee"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ffbb531b32ef641e6d2875738d24cc64"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {

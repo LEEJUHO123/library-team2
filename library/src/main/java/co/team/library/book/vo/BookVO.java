@@ -9,11 +9,10 @@ public class BookVO {
 	private String bookCode;
 	private String bookTitle;
 	private String writer;
-	private String publisher;
-	private int rental;
-	private int volume;
+	private String publisher;	
 	private String category;
 	private int rentalCount;
 	private int returnOrNot;
 	private String image;
+	private String story;
 }

@@ -47,7 +47,7 @@
 
 </head>
 <body>
-	<div class="col-lg-12">
+	<div class="col-lg-12"><br><br><br>
 		<div class="section-title from-blog__title">
 			<h2>카테고리별 차트 현황</h2>
 			<p>
@@ -56,7 +56,7 @@
 
 	<div id="donutchart" style="margin:auto; width: 900px; height: 500px;"></div>
 	<div class="container">
-	<button type="button" onclick="location.href='admin.do'" class="btn btn-outline-danger" >뒤로가기</button>
+	<button type="button" onclick="location.href='admin.do'" class="btn btn-outline-danger" style="margin-left:530px; margin-bottom : 100px" >뒤로가기</button>
 	</div>
 </body>
 </html>

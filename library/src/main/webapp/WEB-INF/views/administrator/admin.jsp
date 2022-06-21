@@ -6,22 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-li{
-	display : inline-block;
-}
 
-ul{
-text-align: center;
-}
-
-img { 
-	width: 20%;
-	height: 20%;
-}
-
-a:hover {
-	color: red;
-}
 </style>
 </head>
 <body>
@@ -31,7 +16,7 @@ a:hover {
 			<p>
 		</div>
 	</div>
-	<div>
+	<div class="admin_list">
 		<ul>
 			<li><a href="memberList.do"><img src="img/mem.png" alt="">멤버리스트</a></li><br>
 			<li><a href="rentalList.do"><img src="img/ren.png" alt="">대여리스트</a></li><br>

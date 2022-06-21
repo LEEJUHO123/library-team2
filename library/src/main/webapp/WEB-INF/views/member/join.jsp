@@ -41,12 +41,12 @@ MemberService dao = new MemberServiceImpl();
 %>
 	<div align="center" style="margin-bottom: 50px; margin : 50px" class="content-center" >
 		<font size="6" class="h4 text-gray-900 mb-4"
-			style="text-align: center;">회원가입</font><hr>
+			style="text-align: center;">회원가입</font>
 	</div>
 	<div class="container" align="center">
 		<!-- <div class="col-lg-4"></div> -->
 		<div class="col-xl-6 col-lg-6 col-md-5">
-			<div class="content-center">
+			<div class="content-center"><hr>
 				<form method="post" action="joinAction.do" id="regForm" name="regForm" onsubmit="return fn_submitChk();">
 
 
@@ -101,7 +101,7 @@ MemberService dao = new MemberServiceImpl();
 					</div>
 					<br>
 
-					<div class="form-group">
+					<div class="form-group"><hr>
 						<!-- <input type="address" id="address" class="form-control"
 							placeholder="주소" name="address" maxlength="50" required><br> -->
 							<input type="text" id="postCode" name="postCode" placeholder="우편번호">
@@ -169,19 +169,19 @@ MemberService dao = new MemberServiceImpl();
 		 
 		function fn_idChk() {
 		
-		/* 	var result = document.getElementById("")
-			 var idd = document.getElementById("id").value;
+		/*  	var result = document.getElementById("")
+			 var idd = document.getElementById("id").value; */
 				
-		  	  if (!idd.match('^[a-zA-Z0-9]*$')) {
+		  	/*   if (!idd.match('^[a-zA-Z0-9]*$')) {
 			 alert("한글 및 특수문자는 아이디로 사용할 수 없습니다");
 			 return false;
-			 }    
+			 }     */
 			 
-		 	if(!id.match('/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')){
+		 /*  	 if(!idd.match('/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/')){
 				alert("이메일 형식으로 입력해주세요")
 				return false;
-			}  */
-			
+			}    */
+			 
 	
 			
 			//아이디 중복 처리
@@ -198,6 +198,7 @@ MemberService dao = new MemberServiceImpl();
 				success : function(data) {
 					if($("#id").val() == ''){
 						alert("아이디를 입력해주세요");
+						
 					}else{
 						if(data == 1){
 							$("#idChk").attr("value", "Y");

@@ -115,7 +115,7 @@ ul, ol {
 	bottom: -15px;
 	right: 0;
 	height: 4px;
-	width: 80px;
+	width: 80%;
 	background: #7fad39;
 	content: "";
 	margin: 0 auto;
@@ -227,6 +227,48 @@ ul, ol {
 /*---------------------
   Header
 -----------------------*/
+
+.qna__top {
+ 	float: left;
+}
+
+.qna__sel {
+	 display: inline-block;
+}
+
+.qna__type {	 
+	 display: block !important;
+	 display: inline-block; 
+	 
+}
+
+.admin_list ul {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.admin_list ul li {
+	font-size : 40px;
+	margin: 10px;
+	display : inline-block;
+}
+
+.admin_list li a {
+	color: black;
+}
+
+.admin_list li a:hover {
+	color: red;			
+}
+
+
+.admin_list li img {
+	background-size: contain;
+	width: 20%;
+	margin-right: 30px;
+}
+
+
 .loginForm {
 	list-style-type: none;
 	text-align:center;	
@@ -414,7 +456,7 @@ ul, ol {
 }
 
 .header__menu {
-	padding: 24px 0;
+	padding-top: 38px;
 }
 
 .header__menu ul li {
@@ -893,6 +935,7 @@ ul, ol {
 	position: relative;
 	overflow: hidden;
 	background-position: center center;
+	border-radius: 10px;
 }
 
 .featured__item__pic__hover {
@@ -1563,7 +1606,7 @@ ul, ol {
 }
 
 .product__item__pic {
-	height: 400px;
+	height: 270px;
 	background-size: contain;
 	position: relative;
 	overflow: hidden;
@@ -1637,10 +1680,12 @@ ul, ol {
 
 .product__item__text h6 {
 	margin-bottom: 10px;
+	color: gray;
 }
 
 .product__item__text h6 a {
 	color: #252525;
+	font-weight: 600;
 }
 
 .product__item__text h5 {
@@ -1687,11 +1732,12 @@ ul, ol {
 	padding-top: 80px;
 }
 
-.product__details__pic__item {
+.product__details__pic__item {	
 	margin-bottom: 20px;
 }
 
 .product__details__pic__item img {
+	background-size: contain;
 	min-width: 100%;
 }
 
@@ -2320,6 +2366,7 @@ ul, ol {
 	line-height: 36px;
 	list-style: none;
 	float: left;
+	margin-left: 20px;
 }
 
 .footer__about__logo {

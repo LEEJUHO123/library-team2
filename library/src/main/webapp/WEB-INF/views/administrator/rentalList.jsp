@@ -23,9 +23,10 @@
 						<tr align="center">
 							<th>아이디</th>
 							<th>책 코드</th>
+							<th>책 제목</th>
 							<th>대여날짜</th>
 							<th>반납날짜</th>
-							<th>대여횟수</th>
+							<th>대여유무</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -33,9 +34,16 @@
 							<tr align="center">
 								<td>${m.id }</td>
 								<td>${m.bookCode }</td>
+								<td>${m.bookTitle }</td>
 								<td>${m.rentalDate }</td>
 								<td>${m.returnDate }</td>
-								<td>${m.returnOrNot }</td>
+								<td>
+								<c:choose>
+									<c:when test="${m.returnOrNot == 0}">대여중</c:when>
+									<c:when test="${m.returnOrNot == 1}">반납완료</c:when>
+									<c:when test="${m.returnOrNot == 2}">연체중</c:when>
+								</c:choose>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
