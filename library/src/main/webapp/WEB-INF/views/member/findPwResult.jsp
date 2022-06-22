@@ -35,7 +35,7 @@
 	      <h4>  입니다 </h4>
 	     </div><br><br><br>
 	     <div class = "found-login"><hr>
- 		    <input type="button" class="btn btn-info" id="btnLogin" value="로그인" onclick="location.href='loginForm.do'" style="padding: 5px; padding-right:15px; padding-left:15px"/>
+ 		    <input type="button" class="btn btn-dark" id="btnLogin" value="로그인" onclick="location.href='loginForm.do'" style="padding: 5px; padding-right:15px; padding-left:15px"/>
        	</div>
        </div><br><br><br><br>
       <%
@@ -48,7 +48,7 @@
 	     </div><br><br><br><br><br>
 	     <div class = "found-login"><hr>
  		    <input type="button" class="btn btn-secondary" id="btnback" value="다시 찾기" onClick="location.href='findPw.do'" style="margin-right: 50px; padding: 5px; padding-right:15px; padding-left:15px"/>
- 		    <input type="button"  class="btn btn-success" id="btnjoin" value="회원가입" onclick="location.href='join.do'" style="padding: 5px; padding-right:15px; padding-left:15px"/>
+ 		    <input type="button"  class="btn btn-dark" id="btnjoin" value="회원가입" onclick="location.href='join.do'" style="padding: 5px; padding-right:15px; padding-left:15px"/>
        	</div>
        </div><br><br><br><br>
        

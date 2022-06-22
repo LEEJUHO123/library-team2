@@ -46,12 +46,21 @@ fieldset {
 <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="col-lg-12">
-			<div class="section-title from-blog__title">
-				<h2>회원정보 수정</h2>
+<section class="breadcrumb-section set-bg" data-setbg="img/banner6.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>비밀번호확인</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a><span>password</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+	</section>
+	<div class="container">
 		<div>
 			<form class="myInfoForm">
 				<fieldset>

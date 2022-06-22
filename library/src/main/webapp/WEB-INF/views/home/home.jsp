@@ -18,6 +18,7 @@
 	font-weight: 700;
 	position: relative;
 }
+
 .home-title h2:after {
 	position: absolute;
 	left: 0;
@@ -25,7 +26,7 @@
 	right: 0;
 	height: 4px;
 	width: 80%;
-	background: #7fad39;
+	background: #5A3214;
 	content: "";
 	margin: 0 auto;
 }
@@ -55,7 +56,7 @@ ul.tabs li.current {
 .tab-content {
 	display: none;
 	padding: 15px;
-	text-align : center;
+	text-align: center;
 	background: #ededed;
 	border-radius: 20px;
 }
@@ -63,34 +64,37 @@ ul.tabs li.current {
 .tab-content.current {
 	display: inherit;
 }
-.item_box{
+
+.item_box {
 	display: inline-block;
-	text-align : center;
+	text-align: center;
 	width: 220px;
 	cursor: pointer;
 }
 
-.tab__controls{
-	text-align : center;
+.tab__controls {
+	text-align: center;
 	margin-bottom: 0px;
 }
-.best__item__text{
+
+.best__item__text {
 	text-align: center;
 	text-shadow: 3px white;
 	padding-top: 5px;
 }
 
-.best__item__text h5{
+.best__item__text h5 {
 	font-weight: 600;
 }
 
 .main__item__text {
 	text-align: center;
-	padding : 15px 10px;
+	padding: 15px 10px;
 	text-shadow: 10px white;
-	background-color : white;
+	background-color: white;
 }
-.main__item__text h5{
+
+.main__item__text h5 {
 	text-shadow: 10px white;
 	text-shadow: 0 0 px #fff;
 	font-weight: 600;
@@ -107,13 +111,15 @@ ul.tabs li.current {
 			<div class="row">
 				<div class="categories__slider owl-carousel">
 					<c:forEach items="${bestseller }" var="best">
-						<div class="col-lg-3">
-							<div class="categories__item set-bg" data-setbg="${best.image }">
-							</div>
+						<a href="bookDetails.do?title=${best.bookTitle }">
+							<div class="col-lg-3">
+								<div class="categories__item set-bg" data-setbg="${best.image }">
+								</div>
 								<div class="best__item__text">
 									<h5>${best.bookTitle }</h5>
 								</div>
-						</div>
+							</div>
+						</a>
 					</c:forEach>
 				</div>
 			</div>
@@ -144,57 +150,72 @@ ul.tabs li.current {
 			</div>
 			<div id="tab-1" class="tab-content current">
 				<c:forEach items="${category800 }" var="tab1">
-					<div class="item_box">
-						<div class="featured__item__pic set-bg" data-setbg="${tab1.image }">
-							<div class="main__item__text">
-								<h5>${tab1.bookTitle }</h5>
+					<a href="bookDetails.do?title=${tab1.bookTitle }">
+						<div class="item_box">
+							<div class="featured__item__pic set-bg"
+								data-setbg="${tab1.image }">
+								<div class="main__item__text">
+									<h5>${tab1.bookTitle }</h5>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 			<div id="tab-2" class="tab-content">
 				<c:forEach items="${category400 }" var="tab2">
-					<div class="item_box">
-						<div class="featured__item__pic set-bg" data-setbg="${tab2.image }">
-							<div class="main__item__text">
-								<h5>${tab2.bookTitle }</h5>
+					<a href="bookDetails.do?title=${tab2.bookTitle }">
+						<div class="item_box">
+							<div class="featured__item__pic set-bg"
+								data-setbg="${tab2.image }">
+								<div class="main__item__text">
+									<h5>${tab2.bookTitle }</h5>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 			<div id="tab-3" class="tab-content">
 				<c:forEach items="${category600 }" var="tab3">
-					<div class="item_box">
-						<div class="featured__item__pic set-bg" data-setbg="${tab3.image }">
-							<div class="main__item__text">
-								<h5>${tab3.bookTitle }</h5>
+					<a href="bookDetails.do?title=${tab3.bookTitle }">
+						<div class="item_box">
+							<div class="featured__item__pic set-bg"
+								data-setbg="${tab3.image }">
+								<div class="main__item__text">
+									<h5>${tab3.bookTitle }</h5>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 			<div id="tab-4" class="tab-content">
 				<c:forEach items="${category700 }" var="tab4">
-					<div class="item_box">
-						<div class="featured__item__pic set-bg" data-setbg="${tab4.image }">
-							<div class="main__item__text">
-								<h5>${tab4.bookTitle }</h5>
+					<a href="bookDetails.do?title=${tab4.bookTitle }">
+						<div class="item_box">
+							<div class="featured__item__pic set-bg"
+								data-setbg="${tab4.image }">
+								<div class="main__item__text">
+									<h5>${tab4.bookTitle }</h5>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 			<div id="tab-5" class="tab-content">
 				<c:forEach items="${category900 }" var="tab5">
-					<div class="item_box">
-						<div class="featured__item__pic set-bg" data-setbg="${tab5.image }">
-							<div class="main__item__text">
-								<h5>${tab5.bookTitle }</h5>
+					<a href="bookDetails.do?title=${tab5.bookTitle }">
+						<div class="item_box">
+							<div class="featured__item__pic set-bg"
+								data-setbg="${tab5.image }">
+								<div class="main__item__text">
+									<h5>${tab5.bookTitle }</h5>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 			<div id="tabcontent"></div>

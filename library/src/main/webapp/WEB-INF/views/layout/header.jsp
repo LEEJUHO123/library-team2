@@ -17,8 +17,7 @@
 		<div class="humberger__menu__cart">
 			<ul>
 				<c:if test="${not empty id }">
-					<ul>
-						<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
+					<ul>						
 						<li><a href="logout.do">Logout</a></li>
 					</ul>
 				</c:if>
@@ -63,15 +62,16 @@
 					<div class="col-lg-6 col-md-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> abc@abc.com</li>
+							<c:if test="${not empty id }">
+								<li><i class="fa fa-envelope"></i> ${id }</li>
+							</c:if>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="header__cart">
 							<c:if test="${not empty id }">
-								<ul>
-									<li><a href="#"><i class="fa fa-bell"></i> <span>1</span></a></li>
+								<ul>									
 									<li>${name }님
 									<li><a href="logout.do">Logout</a></li>
 								</ul>

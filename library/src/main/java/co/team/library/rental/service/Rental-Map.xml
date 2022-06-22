@@ -41,6 +41,7 @@
       ) A
       )
       WHERE RN BETWEEN #{start} AND #{end}
+      ORDER BY RENTALDATE DESC
 	</select>
 
 	<select id="boardListCount3" resultType="int">

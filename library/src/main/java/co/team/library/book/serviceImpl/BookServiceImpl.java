@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import co.team.library.book.page.BookPage;
 import co.team.library.book.service.BookMapper;
 import co.team.library.book.service.BookService;
 import co.team.library.book.vo.BookVO;
 import co.team.library.comm.DataSource;
-import co.team.library.rental.vo.RentalVO;
 
 public class BookServiceImpl implements BookService {
 	
@@ -16,8 +16,8 @@ public class BookServiceImpl implements BookService {
 	private BookMapper map = sqlSession.getMapper(BookMapper.class);
 
 	@Override
-	public List<BookVO> bookList() {
-		return map.bookList();
+	public List<BookVO> books(BookPage page) {
+		return map.books(page);
 	}
 
 	@Override
@@ -73,6 +73,11 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public List<BookVO> categoryBest(BookVO vo) {
 		return map.categoryBest(vo);
+	}
+
+	@Override
+	public int bookListCount(BookPage page) {
+		return map.bookListCount(page);
 	}
 
 }

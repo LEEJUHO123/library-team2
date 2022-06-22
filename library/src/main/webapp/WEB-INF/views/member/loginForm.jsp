@@ -72,7 +72,7 @@
 											</div>
 										</div>
 										<button type="submit"
-											class="btn btn-info btn-user btn-block" value="login">로그인</button>
+											class="btn btn-dark btn-block" value="login">로그인</button>
 										<!-- = <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a> -->
@@ -82,13 +82,13 @@
 									</form>
 									<hr>
 									<div class="text-center">
-										<a class="btn btn-outline-info" href="findId.do">아이디 찾기 </a>
+										<a class="btn btn-outline-dark" href="findId.do">아이디 찾기 </a>
 									</div><br>
 									<div class="text-center">
-										<a class="btn btn-outline-info" href="findPw.do"> 비밀번호 찾기</a>
+										<a class="btn btn-outline-dark" href="findPw.do"> 비밀번호 찾기</a>
 									</div><br>
 									<div class="text-center">
-										<a class="btn btn-success" href="join.do">회원가입</a>
+										<a class="btn btn-dark" href="join.do">회원가입</a>
 									</div>
 								</div>
 							</div>

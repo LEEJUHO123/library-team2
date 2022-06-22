@@ -34,8 +34,8 @@
 	</section>
 	<div class ="btnSearch">
 	<div style="padding-top: 50px;"></div><hr>
-		<input type="button"  style="padding: 7px; padding-right: 25px; padding-left: 25px; margin-right : 50px" class="btn btn-info" name="enter" value="찾기"  onClick="id_search()"style="margin-right: 50px; padding: 5px; padding-right:15px; padding-left:15px">
-		<input type="button" style="padding: 7px; padding-right: 25px; padding-left: 25px"; " class="btn btn-info" name="cancle" value="취소" onClick="location.href='loginForm.do'" style="padding: 5px; padding-right:15px; padding-left:15px">
+		<input type="button"  style="padding: 7px; padding-right: 25px; padding-left: 25px; margin-right : 50px" class="btn btn-dark" name="enter" value="찾기"  onClick="id_search()"style="margin-right: 50px; padding: 5px; padding-right:15px; padding-left:15px">
+		<input type="button" style="padding: 7px; padding-right: 25px; padding-left: 25px"; " class="btn btn-dark" name="cancle" value="취소" onClick="location.href='loginForm.do'" style="padding: 5px; padding-right:15px; padding-left:15px">
  	</div>
  </form>
  </div>

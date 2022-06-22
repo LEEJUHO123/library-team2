@@ -8,14 +8,22 @@
 <title>블랙리스트 목록</title>
 </head>
 <body>
-
-	<div align="center">
-	<div class="col-lg-12">
-		<div class="section-title from-blog__title">
-			<h2>블랙리스트 목록</h2>
-			<p>
+<section class="breadcrumb-section set-bg" data-setbg="img/banner5.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>블랙리스트</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a> <span>Admin</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
+	<div align="center">
+	<br>
 				<div class="container">
 					<table width="100%" class="table table-striped">
 						<thead>

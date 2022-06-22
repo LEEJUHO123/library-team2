@@ -46,12 +46,20 @@
 
 </head>
 <body>
-	<div class="col-lg-12" ><br><br><br>
-		<div class="section-title from-blog__title">
-			<h2>대여별 차트 현황</h2>
-			<p>
+<section class="breadcrumb-section set-bg" data-setbg="img/banner5.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>책 대여별 차트</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a> <span>Admin</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 	<div id="piechart" style="margin:auto;  width: 900px; height: 500px;"></div>
 	<div class="container">
 	<button type="button" onclick="location.href='admin.do'" class="btn btn-outline-danger" style="margin-left:530px; margin-bottom : 100px" >뒤로가기</button>

@@ -7,11 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+<section class="breadcrumb-section set-bg" data-setbg="img/banner1.png">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>문의 작성</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a> <span>QnA</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div align="center">
 		<div>
-			<h1>문의 등록</h1>
-		</div>
-		<div>
+		<br>
+		<br>
 			<form id="frm" action="qnaInput.do" method="POST">
 				<div>
 					<table border="1">
@@ -35,11 +48,13 @@
 					</table>
 				</div><br />
 				<div>
-					<input type="reset" value="글 지우기">&nbsp;&nbsp;
-					<input type="submit" value="문의 저장">&nbsp;&nbsp;
-					<input type="button" value="목록으로 돌아가기" onclick="location.href='qnaList.do'">
+					<input type="submit" class="btn btn-dark" value="문의 작성">&nbsp;&nbsp;
+					<input type="reset" class="btn btn-dark" value="글 지우기">&nbsp;&nbsp;
+					<input type="button" class="btn btn-dark" value="목록으로 돌아가기" onclick="location.href='qnaList.do'">
 				</div>
 			</form>
+			<br>
+			<br>
 		</div>
 	</div>
 </body>

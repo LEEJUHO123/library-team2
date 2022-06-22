@@ -112,7 +112,7 @@ MemberService dao = new MemberServiceImpl();
 						<span id="guide" style="color: #999; display: none"></span> 
 						<input type="text" class="form-control" id="detailAddress" name="detailAddress" placeholder="상세주소" required>
 					</div><hr>
-					<br> <input type="submit" class="btn btn-success"
+					<br> <input type="submit" class="btn btn-dark"
 						style="padding: 10px; padding-right: 150px; padding-left: 150px"
 						value="가입하기">
 

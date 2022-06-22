@@ -13,22 +13,22 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-	<div>
-		<h3 align="center">문의 목록</h3>
-	</div>
-	<div class="qna__top">
-		<select class="qna__type" id="key" name="key">
-			<option value="1">전체</option>
-			<option value="2">작성자</option>
-			<option value="3">문의 제목</option>
-			<option value="4">문의 내용</option>
-		</select>&nbsp;
-		<div class="qna__sel">
-			<input type="text" class="qna__sel" id="val" name="val" >&nbsp;
-			<input type="button" class="qna__sel" value="검색" onclick="search2()"">
+	<section class="breadcrumb-section set-bg" data-setbg="img/banner1.png">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>문의 목록</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a> <span>QnA</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 	<div class="container">
+	<br>
 		<table id="ta" class="table table-striped">
 			<thead>
 				<tr>
@@ -50,8 +50,8 @@
 			</tbody>
 		</table>
 		<div>
-			<button type="button" id="bn1" onclick="location.href = 'home.do'">
-				<i class="fa-solid fa-house"></i>홈가기
+			<button type="button" id="bn1" class="btn btn-dark" onclick="location.href = 'home.do'">
+				<i class="fa-solid fa-house"></i> 메인화면으로
 			</button>
 		</div>
 		<br />

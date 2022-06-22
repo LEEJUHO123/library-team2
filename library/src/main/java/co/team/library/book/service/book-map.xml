@@ -2,36 +2,58 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.team.library.book.service.BookMapper">
 
-	<select id="bookList"
-		resultType="co.team.library.book.vo.BookVO">
+	<select id="books" resultType="co.team.library.book.vo.BookVO">
+		SELECT *
+		FROM(
+		SELECT ROWNUM RN, A.*
+		FROM(
 		SELECT * FROM BOOKLIST ORDER BY BOOKTITLE
+		)A
+		)
+		WHERE RN BETWEEN
+		#{start} AND #{end}
 	</select>
 
-	<select id="searchBookCategory" resultType="co.team.library.book.vo.BookVO">
+	<select id="bookListCount" resultType="int">
+		SELECT COUNT(*) FROM
+		BOOKLIST
+	</select>
+
+	<select id="searchBookCategory"
+		resultType="co.team.library.book.vo.BookVO">
 		SELECT A.BOOKCODE AS BOOKCODE, A.BOOKTITLE AS BOOKTITLE,
-		A.PUBLISHER AS PUBLISHER, A.WRITER AS WRITER,A.IMAGE AS IMAGE, NVL(COUNT, 0) AS RENTALCOUNT
-        FROM BOOKLIST A LEFT OUTER JOIN  (SELECT BOOKCODE, COUNT(*) AS COUNT FROM RENTAL
-        GROUP BY BOOKCODE) B
-        ON A.BOOKCODE = B.BOOKCODE
+		A.PUBLISHER AS PUBLISHER, A.WRITER AS WRITER,A.IMAGE AS IMAGE,
+		NVL(COUNT, 0) AS RENTALCOUNT
+		FROM BOOKLIST A LEFT OUTER JOIN (SELECT BOOKCODE, COUNT(*) AS COUNT FROM
+		RENTAL
+		GROUP BY BOOKCODE) B
+		ON A.BOOKCODE = B.BOOKCODE
 		WHERE A.CATEGORY LIKE '%'|| #{category} ||'%'
-        ORDER BY RENTALCOUNT DESC
+		ORDER BY RENTALCOUNT DESC
 	</select>
 
-	<select id="searchBookWriter" resultType="co.team.library.book.vo.BookVO">
+	<select id="searchBookWriter"
+		resultType="co.team.library.book.vo.BookVO">
 		SELECT * FROM BOOKLIST
-		WHERE WRITER LIKE '%'|| #{writer} ||'%'
+		WHERE WRITER LIKE '%'|| #{writer}
+		||'%'
 		ORDER BY BOOKTITLE
 	</select>
 
-	<select id="searchTitle" resultType="co.team.library.book.vo.BookVO">
+	<select id="searchTitle"
+		resultType="co.team.library.book.vo.BookVO">
 		SELECT * FROM BOOKLIST
-		WHERE BOOKTITLE LIKE '%'|| #{bookTitle} ||'%'
+		WHERE BOOKTITLE LIKE '%'||
+		#{bookTitle} ||'%'
 	</select>
-	
-	<select id="searchKeyword" parameterType="co.team.library.book.vo.BookVO" resultType="co.team.library.book.vo.BookVO">
+
+	<select id="searchKeyword"
+		parameterType="co.team.library.book.vo.BookVO"
+		resultType="co.team.library.book.vo.BookVO">
 		SELECT * FROM BOOKLIST
-		WHERE WRITER LIKE '%'|| #{writer} ||'%'
-        OR BOOKTITLE LIKE '%'|| #{bookTitle} ||'%'
+		WHERE WRITER LIKE '%'|| #{writer}
+		||'%'
+		OR BOOKTITLE LIKE '%'|| #{bookTitle} ||'%'
 		ORDER BY BOOKTITLE
 	</select>
 
@@ -47,9 +69,11 @@
 	<select id="categoryChart"
 		resultType="co.team.library.book.vo.BookVO">
 		SELECT B.CATEGORY, COUNT(*) AS RENTALCOUNT
-		FROM RENTAL A LEFT OUTER JOIN BOOKLIST B
+		FROM RENTAL A
+		LEFT OUTER JOIN BOOKLIST B
 		ON A.BOOKCODE = B.BOOKCODE
-		GROUP BY B.CATEGORY
+		GROUP BY
+		B.CATEGORY
 	</select>
 
 	<insert id="bookInsert"
@@ -67,8 +91,9 @@
 		DELETE FROM BOOKLIST WHERE
 		BOOKCODE=#{bookCode}
 	</delete>
-	
-		<select id="bestseller" resultType="co.team.library.book.vo.BookVO">
+
+	<select id="bestseller"
+		resultType="co.team.library.book.vo.BookVO">
 	    <![CDATA[
         SELECT T.BOOKCODE AS BOOKCODE, T.BOOKTITLE AS BOOKTITLE, 
 	    T.PUBLISHER AS PUBLISHER, T.WRITER AS WRITER, T.IMAGE AS IMAGE, T.RENTALCOUNT AS RENTALCOUNT
@@ -81,8 +106,10 @@
         WHERE ROWNUM <=5
         ]]>
 	</select>
-	
-	<select id="categoryBest" parameterType="co.team.library.book.vo.BookVO" resultType="co.team.library.book.vo.BookVO">
+
+	<select id="categoryBest"
+		parameterType="co.team.library.book.vo.BookVO"
+		resultType="co.team.library.book.vo.BookVO">
 		<![CDATA[
 	    SELECT T.BOOKCODE AS BOOKCODE, T.BOOKTITLE AS BOOKTITLE, 
 	    T.PUBLISHER AS PUBLISHER, T.WRITER AS WRITER, T.IMAGE AS IMAGE, T.RENTALCOUNT AS RENTALCOUNT
@@ -96,5 +123,5 @@
         WHERE ROWNUM <=8
 		]]>
 	</select>
-	
+
 </mapper>

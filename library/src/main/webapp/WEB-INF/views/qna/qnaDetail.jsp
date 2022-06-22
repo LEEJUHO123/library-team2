@@ -8,92 +8,156 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+.banner_section {
+	align-items: center;
+	padding: 45px 0 40px;
+}
+
+.banner_section h2 {
+	font-size: 46px;
+	color: #ffffff;
+	font-weight: 700;
+}
+#ta {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	width: 1000px;
+	line-height: 1;
+	color: #585858;
+	padding: 22px 10px;
+	padding-bottom: 55px;
+	border : 1px solid black;
+}
+#ta thead tr th {
+	font-weight: bold;
+	padding: 12px 30px;
+	padding-left: 42px;
+	text-align : center;
+	border : 1px solid black;
+}
+
+#ta thead tr th span {
+	padding-right: 20px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+}
+#ta tbody tr td {
+	text-align: center;
+	padding: 15px 10px;
+	border : 1px solid black;
+}
+
+
+#reply_table {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	width: 1000px;
+	line-height: 1;
+	color: #585858;
+	padding: 22px 10px;
+	padding-bottom: 55px;
+	border : 1px solid black;
+}
+#reply_table thead tr th {
+	font-weight: bold;
+	padding: 5px;
+	text-align : center;
+	border : 1px solid black;
+	
+}
+
+#reply_table thead tr th span {
+	padding-right: 5px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	text-align: center;
+}
+#reply_table tbody tr td {
+	text-align: center;
+	padding: 5px;
+	border : 1px solid black;
+}
 </style>
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-<!-- 부가적인 테마 -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 </head>
 <body>
-	<div align="center">
-		<div>
-			<h3>문의 상세보기</h3>
+<section class="banner_section set-bg" data-setbg="img/banner1.png">
+		<div class="qna_detail">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb__text">
+						<h2>문의 상세보기</h2>
+						<div class="breadcrumb__option">
+							<a href="home.do">Home</a> <span>QnA</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<br />
-	</div>
-	<div>
+	</section>
+	<div class="qna__detail" align="center">
+	<br>
+	<br>
 		<table id="ta">
 			<thead>
 				<tr>
-					<th width="100">작성자</th>
-					<th width="100">문의 제목</th>
-					<th width="100">문의 내용</th>
-					<th width="100">문의 날짜</th>
-					<c:if test="${id eq qna.id}">
-						<th width="100">수정</th>
-						<th width="100">삭제</th>
-					</c:if>
+					<th>작성자</th>
+					<td>${qna.id }</th>
+					<th>문의 날짜</th>
+					<td>${qna.wdate }</th>
 				</tr>
 			</thead>
 			<tbody id="tb">
 				<tr>
-					<td align="center">${qna.id }</td>
-					<td align="center">${qna.title }</td>
-					<td align="center">${qna.content }</td>
-					<td align="center">${qna.wdate }</td>
+					<td align="center">문의 제목</td>
+					<td align="center" colspan='3'>${qna.title }</td>
+				</tr>
+					<td align="center" height="200px">문의 내용</td>
+					<td align="center" colspan='3' height="200px">${qna.content }</td>
+				</tr>
 					<c:if test="${id eq qna.id}">
-						<td>
-							<button type="button"
+					<td align="center" colspan='4'>
+							<button type="button" class="btn btn-dark"
 								onclick="location.href = 'qnaUpdateForm.do?boardNumber=${qna.boardNumber}'">수정</button>
-						</td>
-						<td>
-							<button type="button"
+							<button type="button" class="btn btn-dark"
 								onclick="location.href = 'qnaDelete.do?boardNumber=${qna.boardNumber}'">삭제</button>
-						</td>
+					</td>
 					</c:if>
+					
 				</tr>
 			</tbody>
 		</table>
 		<br />
 		<div>
-			<h3 align="center">답변</h3>
+			<h4 align="center">답변</h4>
 		</div>
-		<div>
-			<table>
+		<br>
+		<div class="reply">
+			<table id="reply_table">
+					<c:forEach items="${reply}" var="data">
 				<thead>
 					<tr>
-						<th width="100">게시글 번호</th>
-						<th width="100">답변 번호</th>
-						<th width="100">답변 내용</th>
-						<th width="100">답변 날짜</th>
+						<th width="150px">게시글 번호</th>
+						<td align="center">${data.boardNumber}</td>
+						<th>답변 번호</th>
+						<td align="center">${data.replyNumber }</td>
+						<th>답변 날짜</th>
+						<td align="center">${data.rdate }</td>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${reply}" var="data">
 						<tr>
-							<td>${data.boardNumber}</td>
-							<td>${data.replyNumber }</td>
-							<td>${data.replyContent }</td>
-							<td>${data.rdate }</td>
+							<th align="center">답변 내용</th>
+							<td colspan='5' height="200px">${data.replyContent }</td>
 						</tr>
-					</c:forEach>
 				</tbody>
+					</c:forEach>
 			</table>
 		</div>
 
 		<c:if test="${id eq 'abc@abc.com' }">
 			<div align="center">
 				<div>
-					<h3>답변 등록</h3>
+					<h4>답변 등록</h4>
 				</div>
+				<br>
 				<div>
 					<form id="frm" action="replyInput.do" method="POST">
 						<div>
@@ -116,9 +180,9 @@
 						</div>
 						<br />
 						<div>
-							<input type="reset" value="글 지우기">&nbsp;&nbsp; <input
-								type="submit" value="답변 저장">&nbsp;&nbsp; <input
-								type="button" value="목록으로 돌아가기"
+							<input type="reset" class="btn btn-dark" value="글 지우기">&nbsp;&nbsp; <input
+								type="submit" class="btn btn-dark" value="답변 저장">&nbsp;&nbsp; <input
+								type="button" class="btn btn-dark" value="목록으로 돌아가기"
 								onclick="location.href='qnaList.do'">
 						</div>
 						<br />
